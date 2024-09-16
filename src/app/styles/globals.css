@@ -1,0 +1,186 @@
+/* Reset some default browser styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Basic Layout */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* Blog Post */
+.blog {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.blog img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.blog p {
+  margin: 10px 0;
+  line-height: 1.8;
+}
+
+.blogPostMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #777;
+}
+
+.blogPostMeta .authorName {
+  font-size: 0.9rem;
+}
+
+.blogPostMeta .shareBtn {
+  display: flex;
+  gap: 10px;
+}
+
+/* Related Articles */
+.otherBlog {
+  margin-top: 40px;
+}
+
+.otherBlog h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.home-articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.home-article {
+  flex: 1 1 30%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.home-article:hover {
+  transform: translateY(-5px);
+}
+
+.home-article img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.home-article h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.home-article-bottom {
+  margin-top: 10px;
+}
+
+.article-info-div {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .home-articles {
+    flex-direction: column;
+  }
+
+  .home-article {
+    flex: 1 1 100%;
+  }
+}
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
